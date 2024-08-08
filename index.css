@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Mea+Culpa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grey+Qo&family=Stylish&display=swap');
+
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+body {
+    background-color: #000000   ;
+  /* background-image: url('./WD.jpg'); */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+  
+.Name{
+  display: flex;
+  justify-content: center;
+  font-family: "Grey Qo", cursive;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 500%;
+  color: #ffffff;
+}
+
+p{
+  color: #ffffff;
+  padding: 5%;
+  font-family: "Stylish", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* navbar */
+
+/* Google Fonts Import Link */
+
+.navbaritems {
+  padding: 100px;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  font-family: "Cutive Mono", monospace;
+  font-weight: 600;
+  font-size: 200%;
+  font-style: normal;
+}
+
+@keyframes fadeInUp {
+  0% {
+    /* transform: translatex(0%);
+    transform: translateY(100%); */
+    opacity: 0;
+  }
+
+  100% {
+    /* transform: translatex(1000%);
+    transform: translateY(0%); */
+    opacity: 1;
+  }
+}
+
+.fadeInUp-animation {
+  background-color: rgba(0, 0, 0, 0.516);
+  height: 50vh;
+  animation: 3s fadeInUp;
+  box-shadow: 10px 10px 122px 0px rgba(255, 255, 255, 0.427);
+  /* border:10px solid #ff0000; */
+  border-radius: 2%;
+  /* transition: 0.5s ease-in; */
+}
+
+/* navbar  */
+
+.navbaritems ul {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+.navbaritems ul li {
+  list-style: none;
+}
+.navbaritems ul li a {
+  position: relative;
+  display: block;
+  text-transform: uppercase;
+  margin: 20px 0;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  transition: 0.5s;
+  z-index: 1;
+}
+.navbaritems ul li a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top: 2px solid #c2a1a19e;
+  border-bottom: 2px solid #262626;
+  transform: scaleY(2);
+  opacity: 0;
+  transition: 0.3s;
+}
+.navbaritems ul li a:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  transform: scale(0);
+  opacity: 0;
+  transition: 0.3s;
+  z-index: -1;
+}
+.navbaritems ul li a:hover {
+  color: #000000;
+}
+.navbaritems ul li a:hover:before {
+  transform: scaleY(1);
+  opacity: 1;
+}
+.navbaritems ul li a:hover:after {
+  transform: scaleY(1);
+  opacity: 1;
+}
+
+/* links social  */
+.social ul {
+    display: flex;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  
+  .social ul li {
+  list-style: none;
+}
+
+.social ul li a {
+  width: 50px;
+  height: 50px;
+  /* background-color: #828282; */
+  text-align: center;
+  line-height: 50px;
+  font-size: 35px;
+  margin: 0 10px;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #fff;
+  z-index: 1;
+}
+
+.social ul li a .icon {
+  position: relative;
+  color: #ffffff;
+  transition: .5s;
+  z-index: 3;
+}
+
+.social ul li a:hover .icon {
+  color: #fff;
+  transform: rotateY(360deg);
+}
+
+.social ul li a:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f00;
+  transition: .5s;
+  z-index: 2;
+}
+
+.social ul li a:hover:before {
+  top: 0;
+}
+
+.social ul li:nth-child(1) a:before{
+  background: #286cff;
+}
+
+.social ul li:nth-child(2) a:before{
+  background: #ff00b7;
+}
+
+.social ul li:nth-child(3) a:before {
+  background: #063046;
+}
+
+.social ul li:nth-child(4) a:before {
+  background: #605f5e;
+}
