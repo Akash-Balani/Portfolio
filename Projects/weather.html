@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5-Day Weather Forecast</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #74ebd5, #acb6e5);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            color: #333;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #fff;
+        }
+        .weather-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+        .forecast-card {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        .forecast-card:hover {
+            transform: translateY(-5px);
+        }
+        .day {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .weather-icon {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+        }
+        .temperature {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #f56342;
+            margin-bottom: 5px;
+        }
+        .weather-description {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: #666;
+        }
+        .forecast-detail {
+            font-size: 0.9rem;
+            color: #444;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.6rem;
+            }
+            .weather-container {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            .forecast-card {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>5-Day Weather Forecast</h1>
+    
+    <div class="weather-container">
+        <!-- Day 1 -->
+        <div class="forecast-card">
+            <div class="day">Monday</div>
+            <img src="https://via.placeholder.com/80" alt="Weather Icon" class="weather-icon">
+            <div class="temperature">26°C</div>
+            <div class="weather-description">Sunny</div>
+            <div class="forecast-detail">Humidity: 45% | Wind: 10 km/h</div>
+        </div>
+
+        <!-- Day 2 -->
+        <div class="forecast-card">
+            <div class="day">Tuesday</div>
+            <img src="https://via.placeholder.com/80" alt="Weather Icon" class="weather-icon">
+            <div class="temperature">24°C</div>
+            <div class="weather-description">Cloudy</div>
+            <div class="forecast-detail">Humidity: 50% | Wind: 12 km/h</div>
+        </div>
+
+        <!-- Day 3 -->
+        <div class="forecast-card">
+            <div class="day">Wednesday</div>
+            <img src="https://via.placeholder.com/80" alt="Weather Icon" class="weather-icon">
+            <div class="temperature">22°C</div>
+            <div class="weather-description">Rainy</div>
+            <div class="forecast-detail">Humidity: 70% | Wind: 8 km/h</div>
+        </div>
+
+        <!-- Day 4 -->
+        <div class="forecast-card">
+            <div class="day">Thursday</div>
+            <img src="https://via.placeholder.com/80" alt="Weather Icon" class="weather-icon">
+            <div class="temperature">20°C</div>
+            <div class="weather-description">Stormy</div>
+            <div class="forecast-detail">Humidity: 80% | Wind: 15 km/h</div>
+        </div>
+
+        <!-- Day 5 -->
+        <div class="forecast-card">
+            <div class="day">Friday</div>
+            <img src="https://via.placeholder.com/80" alt="Weather Icon" class="weather-icon">
+            <div class="temperature">25°C</div>
+            <div class="weather-description">Partly Cloudy</div>
+            <div class="forecast-detail">Humidity: 55% | Wind: 9 km/h</div>
+        </div>
+    </div>
+
+</body>
+</html>

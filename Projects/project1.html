@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invoice Generator</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        color: #333;
+        background: linear-gradient(to right, #32a31293, #3ab123); /* Gradient purple background */
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .header {
+        text-align: center;
+        padding: 30px;
+        background-color: #2b4c6db1;
+        color: white;
+      }
+
+      .header h1 {
+        font-size: 36px;
+      }
+
+      .tagline {
+        font-size: 18px;
+        margin-top: 10px;
+        color: #dfe3e6;
+      }
+
+      .main-content {
+        padding: 50px;
+        max-width: 1200px;
+        margin: 0 auto;
+        flex: 1;
+      }
+
+      .feature {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 50px;
+        opacity: 0; /* Start hidden for animation */
+        transform: translateY(20px); /* Slide effect */
+        transition: opacity 0.5s ease, transform 0.5s ease;
+      }
+
+      .feature:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+
+      .feature-image {
+        width: 50%;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .feature-text {
+        width: 40%;
+        padding: 20px;
+      }
+
+      .feature-text h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+        color: #2e3a46;
+      }
+
+      .feature-text p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #555;
+      }
+
+      .footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #2e3a46;
+        color: white;
+      }
+
+      .footer p {
+        font-size: 14px;
+      }
+
+      /* Media Queries for Smaller Screens */
+      @media (max-width: 768px) {
+        .feature {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .feature-image,
+        .feature-text {
+          width: 100%;
+        }
+
+        .feature-image {
+          margin-bottom: 20px;
+        }
+
+        .feature-text h2 {
+          font-size: 24px;
+        }
+
+        .feature-text p {
+          font-size: 14px;
+        }
+
+        .main-content {
+          padding: 20px;
+        }
+
+        .header h1 {
+          font-size: 28px;
+        }
+
+        .tagline {
+          font-size: 16px;
+        }
+      }
+
+      .navigate-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+        background-color: #ff4d4d;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .navigate-button:hover {
+        background-color: #ff1a1a;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Invoice Generator for Your Business</h1>
+      <p class="tagline">Create, Edit, and Print Invoices Effortlessly</p>
+    </header>
+
+    <main class="main-content">
+      <section class="feature">
+        <img
+          src="../images/invoiceimage.jpg"
+          alt="Invoice Sample"
+          class="feature-image"
+        />
+        <div class="feature-text">
+          <h2>Create Custom Invoices</h2>
+          <p>Generate professional-looking invoices in just a few clicks.</p>
+        </div>
+      </section>
+
+      <section class="feature">
+        <img
+          src="https://via.placeholder.com/600x400?text=Edit+Invoices"
+          alt="Edit Invoice"
+          class="feature-image"
+        />
+        <div class="feature-text">
+          <h2>Edit Anytime</h2>
+          <p>
+            Make edits to item prices and details easily before printing or
+            saving.
+          </p>
+        </div>
+      </section>
+
+      <section class="feature">
+        <img
+          src="https://via.placeholder.com/600x400?text=Print+Invoices"
+          alt="Print Invoice"
+          class="feature-image"
+        />
+        <div class="feature-text">
+          <h2>Print with One Click</h2>
+          <p>
+            Ready-to-print invoices make your billing processes smoother and
+            faster.
+          </p>
+        </div>
+      </section>
+
+      <section class="feature">
+        <img
+          src="https://via.placeholder.com/600x400?text=Track+Invoices"
+          alt="Track Invoice"
+          class="feature-image"
+        />
+        <div class="feature-text">
+          <h2>Track and Manage</h2>
+          <p>
+            Keep track of all your invoices and manage them efficiently from one
+            place.
+          </p>
+        </div>
+      </section>
+      <a href="index.html" class="navigate-button">See More Project</a>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2024 Your Business Name - Invoice Generator App</p>
+    </footer>
+
+    <script>
+      // JavaScript to animate the features in
+      document.addEventListener("DOMContentLoaded", () => {
+        const features = document.querySelectorAll('.feature');
+        features.forEach((feature, index) => {
+          setTimeout(() => {
+            feature.style.opacity = '1';
+            feature.style.transform = 'translateY(0)';
+          }, index * 300); // Delay each feature's animation
+        });
+      });
+    </script>
+  </body>
+</html>

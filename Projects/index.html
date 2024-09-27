@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Completed Projects</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: radial-gradient(circle, rgba(182, 6, 111, 0.7), rgba(179, 35, 35, 0.7), rgba(190, 59, 59, 0.8)); 
+      height: 100vh;
+      color: white; /* Adjust text color for better visibility */
+    }
+
+    .card {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s; /* Smooth transitions */
+    }
+
+    .card.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card:hover {
+      transform: scale(1.05); /* Slightly enlarge */
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+      opacity: 0.9; /* Slightly transparent */
+    }
+
+    .open-button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+    }
+
+    .open-button:hover {
+      background-color: #0056b3;
+    }
+
+    .navigate-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      text-decoration: none;
+    }
+
+    .navigate-button:hover {
+      background-color: #0056b3;
+    }
+    .card-img-top{
+      height: 200px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Completed Projects</h1>
+    <div class="row">
+      <div class="col-md-3 mb-4">
+        <div class="card text-center" data-index="0">
+          <img src="../images/invoice.png" class="card-img-top" alt="Invoice Generator">
+          <div class="card-body">
+            <h5 class="card-title">Invoice Generator</h5>
+            <p class="card-text">This project is about building an interactive invoicing website.</p>
+            <a href="project1.html" class="btn open-button">Open Project</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-4">
+        <div class="card text-center" data-index="1">
+          <img src="../images/car-parking-app.png" class="card-img-top" alt="Smart Parking System">
+          <div class="card-body">
+            <h5 class="card-title">Smart Parking System</h5>
+            <p class="card-text">This project focuses on creating a custom smart parking solution.</p>
+            <a href="project2.html" class="btn open-button">Open Project</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-4">
+        <div class="card text-center" data-index="2">
+          <img src="../images/weather app.png" class="card-img-top" alt="Weather App">
+          <div class="card-body">
+            <h5 class="card-title">Weather App</h5>
+            <p class="card-text">This project is a weather checking app with a 5-day forecast.</p>
+            <a href="project3.html" class="btn open-button">Open Project</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-4">
+        <div class="card text-center" data-index="3">
+          <img src="../images/freelance.jfif" class="card-img-top" alt="Freelance Projects">
+          <div class="card-body">
+            <h5 class="card-title">Freelance Projects</h5>
+            <p class="card-text">This project involves developing various mobile apps.</p>
+            <a href="project4.html" class="btn open-button">Open Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="../index.html" class="navigate-button">Portfolio</a>
+
+  <!-- Bootstrap JS (optional) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Fade-in animation for cards
+    document.addEventListener('DOMContentLoaded', function() {
+      const cards = document.querySelectorAll('.card');
+      cards.forEach((card, index) => {
+        setTimeout(() => {
+          card.classList.add('show');
+        }, index * 300); // Delay each card's appearance
+      });
+    });
+  </script>
+</body>
+</html>

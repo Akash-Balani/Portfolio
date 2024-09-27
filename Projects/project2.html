@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Parking System Overview</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to left, #8227c393, #8a2be2); /* Gradient purple background */
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Header Styling */
+      header {
+        background-color: rgba(51, 51, 51, 0.9); /* Semi-transparent header */
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 32px;
+        text-transform: uppercase;
+      }
+
+      /* Main Content Styling */
+      .main-content {
+        padding: 20px;
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      .section {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+        align-items: center;
+        justify-content: space-around;
+      }
+
+      .section:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+
+      .section img {
+        width: 100%;
+        max-width: 500px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.5s ease;
+      }
+
+      .section img:hover {
+        transform: scale(1.05);
+      }
+
+      .section .text-content {
+        max-width: 500px;
+        margin: 20px;
+        padding: 20px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .section h2 {
+        margin-top: 0;
+        font-size: 26px;
+        color: #333;
+      }
+
+      .section p {
+        color: #666;
+        line-height: 1.6;
+      }
+
+      /* Media Queries for Responsiveness */
+      @media (max-width: 768px) {
+        .section {
+          flex-direction: column;
+        }
+
+        .section img {
+          max-width: 100%;
+        }
+
+        .section .text-content {
+          margin-top: 20px;
+        }
+      }
+
+      /* Footer Styling */
+      footer {
+        text-align: center;
+        padding: 20px 0;
+        background-color: rgba(51, 51, 51, 0.9); /* Semi-transparent footer */
+        color: white;
+      }
+
+      .navigate-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+        padding: 10px 20px;
+        background-color: #007bff; /* Bootstrap primary color */
+        color: white;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+      }
+
+      .navigate-button:hover {
+        background-color: #0056b3; /* Darker shade on hover */
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Smart Parking System Overview</h1>
+      <p>Efficient parking management with real-time monitoring and seamless user experience.</p>
+    </header>
+
+    <div class="main-content">
+      <!-- Section 1 -->
+      <div class="section">
+        <img src="../1.jpg" alt="Parking Slot Reservation" />
+        <div class="text-content">
+          <h2>Parking Slot Reservation</h2>
+          <p>With our smart parking system, users can easily reserve parking slots in advance. The system provides real-time availability of slots, allowing drivers to select their preferred spot. The intuitive interface simplifies the booking process.</p>
+        </div>
+      </div>
+
+      <!-- Section 2 -->
+      <div class="section">
+        <img src="../2.jpg" alt="Real-time Monitoring" />
+        <div class="text-content">
+          <h2>Real-time Monitoring</h2>
+          <p>The system features real-time monitoring that allows administrators to track available, occupied, and reserved slots across all parking lots. This ensures smooth traffic flow and effective management of parking resources.</p>
+        </div>
+      </div>
+
+      <!-- Section 3 -->
+      <div class="section">
+        <img src="../3.jpg" alt="Payment Integration" />
+        <div class="text-content">
+          <h2>Seamless Payment Integration</h2>
+          <p>Users can make quick and secure payments directly through the app. The smart parking system supports multiple payment modes including credit/debit cards, digital wallets, and contactless payments for a hassle-free experience.</p>
+        </div>
+      </div>
+
+      <!-- Section 4 -->
+      <div class="section">
+        <img src="../1.jpg" alt="Analytics and Reports" />
+        <div class="text-content">
+          <h2>Comprehensive Analytics and Reports</h2>
+          <p>Administrators can access detailed analytics and reports on parking usage, revenue, and slot availability. This data-driven approach helps in making informed decisions to optimize parking operations.</p>
+        </div>
+      </div>
+    </div>
+
+    <a href="index.html" class="navigate-button">See More Project</a>
+
+    <footer>
+      <p>&copy; 2024 Our Website. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>
